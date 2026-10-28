@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ecebe5"><title>Nexo — Conversor de precisão</title><link rel="icon" href="assets/icons/brand-rulers.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="creative.css"><script src="core.js" defer></script><script src="app.js" defer></script><script src="experience.js" defer></script></head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="header"><a href="index.html" class="logo" aria-label="Nexo, início"><img src="assets/icons/brand-rulers.svg" alt="" width="35" height="35" aria-hidden="true">NEXO</a><span class="header-meta">Relações calibradas / 05</span></header>
+<main id="main">
+  <section class="intro"><div class="intro-copy" data-rb="slide-left" data-rb-trigger="mount"><span class="eyebrow">Precisão entre dois pontos</span><h1 data-rb-split="mount">Todo valor encontra<br>seu equivalente.</h1><p>Moedas e unidades conectadas na hora, com histórico local.</p></div><div class="calibration"><canvas id="instrument-dial" width="400" height="400" role="slider" tabindex="0" aria-label="Ajustar valor pelo mostrador" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="100"></canvas><span class="dial-read" aria-hidden="true">NEX / 05</span></div></section>
+  <div class="layout">
+    <section class="converter" data-rb="slide-left">
+      <div class="tabs" role="group" aria-label="Tipo de conversão"><button type="button" class="active" data-category="currency" aria-pressed="true">Moedas</button><button type="button" data-category="length" aria-pressed="false">Comprimento</button><button type="button" data-category="mass" aria-pressed="false">Massa</button><button type="button" data-category="temperature" aria-pressed="false">Temperatura</button></div>
+      <div class="work">
+        <div class="input-panel"><span class="step">Entrada</span><label class="amount-label" for="amount">Valor a converter</label><input id="amount" class="amount" type="number" step="any" inputmode="decimal" value="100" aria-describedby="error"><div class="pair"><div class="selector"><label for="from">Unidade de origem</label><select id="from"></select></div><button type="button" id="swap" class="swap" aria-label="Inverter unidades" title="Inverter unidades"><img src="assets/icons/swap.svg" alt="" width="22" height="22" aria-hidden="true"></button><div class="selector"><label for="to">Unidade de destino</label><select id="to"></select></div></div></div>
+        <div class="result"><div class="result-grid" aria-hidden="true"></div><div class="result-top"><span class="step">Leitura convertida</span><span class="status-light">pronto</span></div><div id="answer" class="answer" aria-live="polite">—</div><div class="answer-unit" id="answer-unit"></div><div class="rate-info" id="rate-info" role="status">—</div><button type="button" id="refresh-rate" class="refresh-rate">Atualizar cotação</button></div>
+        <p class="error" id="error" role="alert" hidden></p><button type="button" class="save" id="save">Salvar no histórico <span>+</span></button>
+      </div>
+    </section>
+    <aside class="history" data-rb="slide-right"><div class="history-head"><div><span class="step">Fita de memória</span><h2>Conversões salvas</h2></div><button type="button" id="clear" class="clear">Limpar</button></div><ol id="history-list" class="history-list"></ol><div id="history-empty" class="history-empty"><img class="history-icon" src="assets/icons/history.svg" alt="" width="66" height="66" aria-hidden="true"><p>Nenhuma leitura salva.</p><small>Guarde resultados que deseja consultar novamente.</small></div><p class="history-note">O histórico fica neste navegador. Cotações de moeda são referências de mercado e não incluem tarifas.</p></aside>
+  </div>
+  <footer><span>Nexo / instrumento local</span><span>Taxas por <a href="https://frankfurter.dev/" target="_blank" rel="noreferrer">Frankfurter</a>. Demais conversões funcionam offline.</span><span class="author-credit">Criado por <strong>Jéssica Montes Santos</strong> · <a href="https://github.com/miwnyan" target="_blank" rel="me noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/jessicamontessantos/" target="_blank" rel="me noreferrer">LinkedIn</a></span><small class="asset-credits">Ativos: <a href="https://icons.getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap Icons</a> via <a href="https://iconify.design/" target="_blank" rel="noreferrer">Iconify</a>.</small></footer>
+</main>
+</body>
+</html>
